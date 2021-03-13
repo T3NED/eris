@@ -1553,7 +1553,7 @@ declare namespace Eris {
     toString(): string;
   }
 
-  export class Collection<T extends { id: string | number }> extends Map<string | number, T> {
+  export class Collection<T> extends Map<string | number, T> {
     baseObject: new (...args: any[]) => T;
     limit?: number;
     constructor(baseObject: new (...args: any[]) => T, limit?: number);
